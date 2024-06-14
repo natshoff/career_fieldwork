@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="GC2" id="GC2">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>GC2</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#GC2">
+		<SimpleData name="Identifier">GC2</SimpleData>
+		<SimpleData name="Location">GordonCreek</SimpleData>
+		<SimpleData name="Flown">yes</SimpleData>
+		<SimpleData name="Year">2023</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.304748237589,40.7280573587792 -105.308971993901,40.7284573207689 -105.308800558844,40.7323133082486 -105.306233170622,40.7334199580733 -105.3022976991,40.7297803989031 -105.304748237589,40.7280573587792</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="OV5" id="OV5">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>OV5</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#OV5">
+		<SimpleData name="Identifier">OV5</SimpleData>
+		<SimpleData name="Location">Overland</SimpleData>
+		<SimpleData name="Notes">old Overland_jamestown</SimpleData>
+		<SimpleData name="Flown">yes</SimpleData>
+		<SimpleData name="Year">2023</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.39215113016,40.1209959486044 -105.388832813722,40.1210071368786 -105.388836185646,40.1215990485255 -105.386903694227,40.1215980278272 -105.38691005635,40.1209985908857 -105.384762824745,40.1209907589358 -105.384801317323,40.1191624127396 -105.385053204639,40.1188318967991 -105.391699687559,40.1188620576263 -105.392163805184,40.1198045669504 -105.39215113016,40.1209959486044</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

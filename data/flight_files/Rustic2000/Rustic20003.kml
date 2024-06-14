@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Rustic20003" id="Rustic20003">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>Rustic20003</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Rustic20003">
+		<SimpleData name="Identifier">Rustic20003</SimpleData>
+		<SimpleData name="Location">Rustic2000</SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2023</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.522065728692,40.6915347897167 -105.527129844647,40.6857024259457 -105.529138904091,40.6867270452982 -105.52410814635,40.6925764634021 -105.522065728692,40.6915347897167</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

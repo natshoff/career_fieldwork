@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="HAY9" id="HAY9">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>HAY9</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#HAY9">
+		<SimpleData name="Identifier">HAY9</SimpleData>
+		<SimpleData name="Location">Hayman</SimpleData>
+		<SimpleData name="Notes">old HaymanReflyS4</SimpleData>
+		<SimpleData name="Flown">yes</SimpleData>
+		<SimpleData name="Year">2023</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.24254446053,39.1276925729104 -105.251720767307,39.1282868997896 -105.251561592204,39.1301432768853 -105.242260555216,39.1295818039419 -105.24254446053,39.1276925729104</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

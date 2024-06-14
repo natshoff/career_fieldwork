@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="SCH3" id="SCH3">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>SCH3</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SCH3">
+		<SimpleData name="Identifier">SCH3</SimpleData>
+		<SimpleData name="Location">Schoonover</SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2023</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.230855648468,39.2490908155871 -105.225628437765,39.2491145175215 -105.225571035941,39.2474054331293 -105.230798208027,39.247408650434 -105.230855648468,39.2490908155871</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

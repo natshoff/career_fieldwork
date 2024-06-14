@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="TG3" id="TG3">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>TG3</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TG3">
+		<SimpleData name="Identifier">TG3</SimpleData>
+		<SimpleData name="Location">TyndallGulch</SimpleData>
+		<SimpleData name="Notes">PUBLIC ONLY PLOT SET</SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2024</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.322663148443,38.1378194198806 -105.322796813533,38.1454599724558 -105.320437599534,38.1455003698626 -105.320254935303,38.137779483292 -105.322663148443,38.1378194198806</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

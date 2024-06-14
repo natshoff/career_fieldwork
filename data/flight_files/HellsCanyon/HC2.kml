@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="HC2" id="HC2">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>HC2</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#HC2">
+		<SimpleData name="Identifier">HC2</SimpleData>
+		<SimpleData name="Location">HellsCanyon</SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2024</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.323962938429,40.3106221013361 -105.328939112181,40.3100408931722 -105.328987595514,40.3077878435407 -105.33272619891,40.3077608889429 -105.333541253912,40.3093523004375 -105.333612591743,40.3111008578943 -105.324284738712,40.312736892954 -105.323962938429,40.3106221013361</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

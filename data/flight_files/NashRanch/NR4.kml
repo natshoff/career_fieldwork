@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="NR4" id="NR4">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>NR4</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#NR4">
+		<SimpleData name="Identifier">NR4</SimpleData>
+		<SimpleData name="Location">NashRanch</SimpleData>
+		<SimpleData name="BurnStatus"></SimpleData>
+		<SimpleData name="Notes"></SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2024</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.354947607326,38.7291451643376 -105.355021781889,38.7367854377564 -105.352363300539,38.7368575864936 -105.352240398951,38.7291367480225 -105.354947607326,38.7291451643376</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

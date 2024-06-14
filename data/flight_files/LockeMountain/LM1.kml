@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="LM1" id="LM1">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>LM1</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#LM1">
+		<SimpleData name="Identifier">LM1</SimpleData>
+		<SimpleData name="Location">LockeMountain</SimpleData>
+		<SimpleData name="BurnStatus">both</SimpleData>
+		<SimpleData name="Notes"></SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2024</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.224466309144,38.2641045343089 -105.232834665085,38.267959165422 -105.22926860801,38.2727885121622 -105.220787152951,38.268925456914 -105.224466309144,38.2641045343089</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

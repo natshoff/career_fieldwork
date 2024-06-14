@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="CMBL2" id="CMBL2">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="Identifier" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="BurnStatus" type="string"></SimpleField>
+	<SimpleField name="Notes" type="string"></SimpleField>
+	<SimpleField name="Flown" type="string"></SimpleField>
+	<SimpleField name="Year" type="int"></SimpleField>
+</Schema>
+<Folder><name>CMBL2</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#CMBL2">
+		<SimpleData name="Identifier">CMBL2</SimpleData>
+		<SimpleData name="Location">Campbell</SimpleData>
+		<SimpleData name="BurnStatus"></SimpleData>
+		<SimpleData name="Notes"></SimpleData>
+		<SimpleData name="Flown">no</SimpleData>
+		<SimpleData name="Year">2024</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-105.368961533294,38.8201186852609 -105.361826930204,38.825336455938 -105.359956225408,38.8238535014303 -105.367133331555,38.8185530327348 -105.368961533294,38.8201186852609</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>
