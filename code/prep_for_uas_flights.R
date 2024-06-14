@@ -13,7 +13,12 @@ epsg <- "EPSG:26913"
 
 # Create DEM for front range
 frontRange <- sf::st_read(here::here('data', 'front_range_shp.gpkg'))
-fRDEMFile <- here::here('data', 'frontRangeDEM26913.tif')
+
+largeFilesDir <- here::here('data/large_files')
+if(!dir.exists(largeFilesDir)) {
+  dir.create(largeFilesDir)
+}
+fRDEMFile <- here::here(largeFilesDir, 'frontRangeDEM26913.tif')
 if(!file.exists(fRDEMFile)) {
   frontRangeDEM <- elevatr::get_elev_raster(frontRange, z = 12) |> #https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html#Key_information_about_version_0990_and_upcoming_versions_of_elevatr
     terra::rast() |> 
