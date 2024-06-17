@@ -1,5 +1,6 @@
 # Prepare CAREER UAS data for processing
 
+## Create file structure and transfer data
 CAREER data is processed by individual transect. To create the standardized CAREER UAS Data Structure, put the shell script [create_new_career_transect_file_structure.sh](https://github.com/TylerLMcIntosh/career_fieldwork/blob/main/code/create_new_career_transect_file_structure.sh) in the directory where you would like to create your transect subdirectory.
 
 When you run this shell script, you will be asked for a few pieces of standardized information. From this user-supplied information, the script will generate the full structure outlined at the bottom of this document.
@@ -8,6 +9,9 @@ To move this full directory to Petalibrary for processing and storage, run the b
 ```
 scp -r LOCATION_OF_DIRECTORY YOUR_IDENTIKEY@login.rc.colorado.edu:/pl/active/earthlab/career/SUMMER-2024
 ```
+
+## Record that the transect is ready to process
+Tracking of CAREER data processing is held in [this Google Sheet](https://docs.google.com/spreadsheets/d/1QifnM6ORmHZaS2IsCR-tbr5HOFIdyin8sbgU08rIpkE/edit?usp=sharing). When you move data to PL to be processed, make sure to add a new line to this spreadsheet to document that the files are ready for processing.
 
 **Proceed to [02: Process UAS Data](https://github.com/TylerLMcIntosh/career_fieldwork/blob/main/workflows/02_process_uas_data.md).**
 
