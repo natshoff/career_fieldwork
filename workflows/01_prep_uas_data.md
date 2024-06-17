@@ -1,4 +1,4 @@
-# CAREER UAS Data Structure
+# Prepare CAREER UAS data for processing
 
 CAREER data is processed by individual transect. To create the standardized CAREER UAS Data Structure, put the shell script [create_new_career_transect_file_structure.sh](https://github.com/TylerLMcIntosh/career_fieldwork/blob/main/code/create_new_career_transect_file_structure.sh) in the directory where you would like to create your transect subdirectory.
 
