@@ -9,9 +9,9 @@ To move this full directory to Petalibrary for processing and storage, run the b
 scp -r LOCATION_OF_DIRECTORY YOUR_IDENTIKEY@login.rc.colorado.edu:/pl/active/earthlab/career/SUMMER-2024
 ```
 
-Proceed to [02: Process UAS Data](https://github.com/TylerLMcIntosh/career_fieldwork/blob/main/workflows/02_process_uas_data.md).
+**Proceed to [02: Process UAS Data](https://github.com/TylerLMcIntosh/career_fieldwork/blob/main/workflows/02_process_uas_data.md).**
 
-**FILE STRUCTURE**
+** File Structure
 ```
 C:.
 ├───final_outputs                    # This subdirectory is where all finalized outputs from Nayani's code go
