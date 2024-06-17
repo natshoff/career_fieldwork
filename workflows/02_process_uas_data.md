@@ -26,6 +26,86 @@ If the user does not have an Identikey, you can request one through the CU POI o
 
 ## Process in Metashape
 
+This section of the workflow describes how to process UAS data for the CAREER project. It is a more specific version of the [Earth Lab metashape workflow](https://github.com/earthlab/el-drones/blob/master/docs/03_post-mission_agisoft_metashape_workflow.md), which was developed by Megan Cattau from a guide posted in this [Agisoft forum post](https://www.agisoft.com/forum/index.php?topic=7851.0). Also see Megan Cattau's [UASWorkflows repo](https://github.com/mcattau/UASWorkflows).
+
+### Steps
+0. If you are operating on CU Boulder research computing resources, before the FIRST time you ever use Metashape, run this line of code from the terminal:
+
+   echo "umask 0000" >> ~/.metashape
+   
+   This will ensure that all of your Metashape files and directories have open permissions (the default settings are a pain)
+2. Open Metashape and save project in a sensible place (File -> save)
+   - To open metashape on  CURC, open a terminal and type the following code lines:
+        - source ~/.metashape
+        - metashape
+    - When saving your file, keep the file naming structure as the plot or transect directory you are working in and add _METASHAPE to the end. If you are processing for Macrosystems, add either M300_METASHAPE or MINI2_METASHAPE to the end.
+4. Set preferences (Tools -> preferences)  
+    - -> GPU-> Check box for GPU if there is one available, check box for Use CPU when performing…)  
+5. Import photos (Workflow menu in top toolbar -> add photos (or folder--adding the entire folder is often easiest))   
+    - Select single (e.g., Phantom4Pro camera) or multi-camera system (e.g., Kernel camera (Micasense))
+    - - When uploading a folder of images for a multi-camera system, will need to select “Multi-camera system: arrange images based on meta data.” It is okay to have subfolders included in the folder (i.e. adding a folder with subfolders of "Camera1" and "Camera2" will add all photos from both subfolders).
+    - Import all photos, including reflectance cal target photos (if you have them, i.e. for MicaSense camera) (have to repeat this if images are in separate folders)  
+    - Note: Cal photos need to go in a separate folder for calibration images in the Workspace pane. They are often automatically detected at import (if noted in metadata), automatically detected at the next step, or manually moved later.
+6. Clean up photos 
+    - Manually remove outlier photos (e.g.,  taken during take-off) in Model workspace
+    - Check camera calibration (from EXIF files) (tools-> Camera calibration) exiftool  
+7. Convert GPS coordinates of your geotagged images to match the coordinate system of your project. Use the "convert" tab under the "Reference" panel and select the coordinate system from the "coordinate System" under "Convert Reference" dialog box. Verify coordinate system of imagery by clicking on chunk in Workspace pane and looking in bottom left corner.
+    - For all CAREER project imagery, convert coordinates to EPSG::26913.
+9. Estimate image quality  
+    - In Photos workspace, change view to detailed > select all photos > right-click > Estimate Image Quality... 
+    - Disable all images that have an image quality below 0.7  
+10. Align photos (workflow->) same as generating sparse point cloud  
+    - High accuracy, generic preselection, reference preselection
+    - Under advanced, check Adaptive model fitting
+    - CAREER uses 40,000 & 10,000 for key and tie point limits
+11. Clean sparse point cloud (Model > GRADUAL SELECTION). Remove all points with high reprojection error (choose a value below 1, suggest using 0.5-0.8 ) and high reconstruction uncertainty (try to find the 'natural threshold' by moving the slider).
+12. Adjust bounding box to be just at the boundary of the furthest out flight lines
+13. Optimize Cameras (tools ->) to improve alignment accuracy  
+    - Check all but bottom left one (Fit k4) when using DJI imagery. Don’t check advanced (Adaptive camera model fitting and est tie point covariance)  
+    - Agisoft’s description of through correspondence (AIS): Optimize cameras - you refine the camera calibration parameter values based on the calculated values after the images are aligned.    
+18. Build Dense point cloud (workflow ->)    
+    - Ultra high quality
+    - Aggressive depth filtering
+    - check box for calculate point colors)
+23. Build DEM from dense cloud (workflow ->)   
+    - For orthomosaic generation – faster than mesh (but mesh may be required for complex terrain)  
+    - Geographic type, check that it’s correct projection  
+    - Source data: dense cloud  
+    - Interpolation: Extrapolated (interpolation – enabled would leave elevation values only for areas seen by a camera)  
+    - Check resolution  
+24. Build orthomosaic based on DEM (workflow ->)
+    - DEM surface
+    - Select if you want blending, otherwise Mosaic (default)
+    - Enable hole filling
+    - Check pixel size (can check meters button)
+33.	Export results to the 'metashape/metashape_outputs' folder for your project
+        - Right click on the Dense Cloud and 'Export Dense Cloud...' Export the points with the appropriate name and then '_POINTCLOUD'. The filetype will be .laz (the default)
+             - Since CAREER project transects point clouds are large, these will need to be tiled. In the dense cloud export dialogue (after you choose your file name), check the box next to "Split in blocks (m):" and then put in your block size. For CAREER processing, use 100x100m.
+        - Right click on the orthomosaic and 'Export Orthomosaic...' Export the orthomosaic with the appropriate name and then '_ORTHO'. If you have a shapefile boundary loaded up (see above), 
+34. Generate the processing report
+    - File -> Export -> Generate Report
+    - Keep all defaults, but re-name it to the appropriate name and then "_report". Click 'ok'
+    - Make sure it exports in the 'Outputs' folder for your project with the right name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Document that you've finished the process
 * Make sure to mark down that the processing is complete on the [data processing spreadsheet](https://docs.google.com/spreadsheets/d/1QifnM6ORmHZaS2IsCR-tbr5HOFIdyin8sbgU08rIpkE/edit?usp=sharing) by putting your initials in the column of each output
