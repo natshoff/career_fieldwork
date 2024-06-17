@@ -1,6 +1,6 @@
 # Process CAREER UAS Data
 
-This workflow outlines how to process CAREER UAS data using Metashape on CU Boulder's research computing.
+This workflow outlines how to process CAREER UAS data using Metashape on CU Boulder's research computing. Note that CAREER transects can be time-consuming to process, but that Metashape will allow you to open up multiple instances of it and process in both (To open another Metashape window, go to Terminal, create a new Terminal tab, and then run "source ~/.metashape" and "metashape" again.
 
 ## Access CU Research Computing via OnDemand
 * Go to CU OnDemand: https://ondemand.rc.colorado.edu/
