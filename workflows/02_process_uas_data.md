@@ -21,9 +21,6 @@ If the user has a CU Identikey, they can just sign up for an account as normal a
  
 If the user does not have an Identikey, you can request one through the CU POI or Research Affiliate process ([see Earth Lab's guide to this process](https://github.com/earthlab/earth-lab-operations/wiki/CU-Research-Affiliates-&-Persons-of-Interest-(POIs))). Once that process is finished, the user can sign up for a CURC account per the above instructions.
 
-
-# Process the data using Metashape
-
 ## Document that you are starting the process
 * Before starting to process imagery, check the [data processing spreadsheet](https://docs.google.com/spreadsheets/d/1QifnM6ORmHZaS2IsCR-tbr5HOFIdyin8sbgU08rIpkE/edit?usp=sharing) to make sure that nobody has done the transect you are about to do. Write down that you are starting processing in by putting "YOUR_INITIALS in process" in the orthomosaic column of the transect you are working on.
 
