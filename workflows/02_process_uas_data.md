@@ -77,9 +77,9 @@ This section of the workflow describes how to process UAS data for the CAREER pr
     - Enable hole filling
     - Check pixel size (can check meters button)
 16.	Export results to the 'metashape/metashape_outputs' folder for your transect
-        - Right click on the Dense Cloud and 'Export Dense Cloud...' Export the points with the appropriate transect name and then '_POINTCLOUD'. The filetype will be .laz (the default)
-             - Since CAREER project transects point clouds are large, these will need to be tiled. In the dense cloud export dialogue (after you choose your file name), check the box next to "Split in blocks (m):" and then put in your block size. For CAREER processing, use 100x100m.
-        - Right click on the orthomosaic and 'Export Orthomosaic...' Export the orthomosaic with the appropriate transect name and then '_ORTHO'. If you have a shapefile boundary loaded up (see above), 
+    - Right click on the Dense Cloud and 'Export Dense Cloud...' Export the points with the appropriate transect name and then '_POINTCLOUD'. The filetype will be .laz (the default)
+    - Since CAREER project transects point clouds are large, these will need to be tiled. In the dense cloud export dialogue (after you choose your file name), check the box next to "Split in blocks (m):" and then put in your block size. For CAREER processing, use 100x100m.
+    - Right click on the orthomosaic and 'Export Orthomosaic...' Export the orthomosaic with the appropriate transect name and then '_ORTHO'. 
 17. Generate the processing report to the 'metashape/metashape_outputs' folder for your project
     - File -> Export -> Generate Report
     - Keep all defaults, but re-name it to the appropriate transect name and then "_report". Click 'ok'
