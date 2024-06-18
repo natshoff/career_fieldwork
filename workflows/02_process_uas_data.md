@@ -42,11 +42,8 @@ This section of the workflow describes how to process UAS data for the CAREER pr
     - When saving your file, keep the file naming structure as the plot or transect directory you are working in and add _METASHAPE to the end
 4. Set preferences (Tools -> preferences)  
     - -> GPU-> Check box for GPU if there is one available, check box for Use CPU when performing…)  
-5. Import photos (Workflow menu in top toolbar -> add photos (or folder--adding the entire folder is often easiest))   
-    - Select single (e.g., Phantom4Pro camera) or multi-camera system (e.g., Kernel camera (Micasense))
-    - - When uploading a folder of images for a multi-camera system, will need to select “Multi-camera system: arrange images based on meta data.” It is okay to have subfolders included in the folder (i.e. adding a folder with subfolders of "Camera1" and "Camera2" will add all photos from both subfolders).
-    - Import all photos, including reflectance cal target photos (if you have them, i.e. for MicaSense camera) (have to repeat this if images are in separate folders)  
-    - Note: Cal photos need to go in a separate folder for calibration images in the Workspace pane. They are often automatically detected at import (if noted in metadata), automatically detected at the next step, or manually moved later.
+5. Import photos (Workflow menu in top toolbar -> add folder--adding the entire folder is often easiest   
+    - Select single camera system
 6. Clean up photos 
     - Manually remove outlier photos (e.g.,  taken during take-off) in Model workspace
     - Check camera calibration (from EXIF files) (tools-> Camera calibration) exiftool  
