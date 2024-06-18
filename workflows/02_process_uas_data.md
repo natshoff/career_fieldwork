@@ -62,7 +62,7 @@ This section of the workflow describes how to process UAS data for the CAREER pr
     - Check all but bottom left one (Fit k4) when using DJI imagery. Don’t check advanced (Adaptive camera model fitting and est tie point covariance)  
     - Agisoft’s description of through correspondence (AIS): Optimize cameras - you refine the camera calibration parameter values based on the calculated values after the images are aligned.    
 13. Build Dense point cloud (workflow ->)    
-    - Ultra high quality
+    - High quality
     - Aggressive depth filtering
     - check box for calculate point colors)
 14. Build DEM from dense cloud (workflow ->)   
@@ -83,23 +83,6 @@ This section of the workflow describes how to process UAS data for the CAREER pr
 17. Generate the processing report to the 'metashape/metashape_outputs' folder for your project
     - File -> Export -> Generate Report
     - Keep all defaults, but re-name it to the appropriate transect name and then "_report". Click 'ok'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
