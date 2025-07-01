@@ -18,11 +18,11 @@ largeFilesDir <- here::here('data/large_files')
 if(!dir.exists(largeFilesDir)) {
   dir.create(largeFilesDir)
 }
-fRDEMFile <- here::here(largeFilesDir, 'frontRangeDEM26913.tif')
+fRDEMFile <- here::here(largeFilesDir, 'frontRangeDEM4326.tif')
 if(!file.exists(fRDEMFile)) {
   frontRangeDEM <- elevatr::get_elev_raster(frontRange, z = 12) |> #https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html#Key_information_about_version_0990_and_upcoming_versions_of_elevatr
     terra::rast() |> 
-    terra::project(terra::crs(epsg))
+    terra::project(terra::crs("EPSG:4326"))
   
   terra::writeRaster(frontRangeDEM,
                      fRDEMFile,
